@@ -17,7 +17,12 @@ public class Scope {
 
 		// give me the count of the links on the page
 
-		c
+		System.getProperty("webDriver.chrome.driver",
+				"C:\\Users\\ASHRITH\\eclipse-workspace\\ITLearn2020\\Drivers\\chromedriver.exe");
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
 		List<WebElement> link = driver.findElements(By.tagName("a"));
 		System.out.println(link.size()); // this is the limiting webelement scope
 
